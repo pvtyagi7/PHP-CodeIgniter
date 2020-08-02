@@ -20,7 +20,6 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////For multiple files uploading////////////////////
 
-					///////////////////For Room type image////////////
 			$files = $_FILES;
 			$dataInfo = array();
 			$files = $_FILES;
@@ -64,14 +63,7 @@
 			}
 			}
 			$images =implode(',', $image_details);
-			$hnid=explode('-',$this->input->post('hotelname'));
-			$hotelname=$hnid[0];
-			$hotelid=$hnid[1];
+			
 						$insert=array(
-						'hotelid'=>$hotelid,
-						'hotelname'=>$hotelname,
-						'roomtype'=>$this->input->post('roomtype'),
-						'price'=>$this->input->post('price'),
-						'listingdescription'=>$this->input->post('listingdescription'),
 						'image'=>$images,
 						);
